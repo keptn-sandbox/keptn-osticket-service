@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
         env:
         - name: OSTICKET_URL
-          value: https://example.com
+          value: http://111.222.333.444
         - name: OSTICKET_API_KEY
           value: ***
 ---
