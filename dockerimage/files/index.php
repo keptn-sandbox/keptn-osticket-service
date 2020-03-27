@@ -10,7 +10,7 @@ $entityBody = file_get_contents('php://input');
 if ($entityBody == null) exit("Missing data input from Keptn. Exiting.");
 
 // Write the raw input to the log file...
-$logFile = fopen("logs/osticketIncomingEvents.log", "a") or die("Unable to open file!");
+$logFile = fopen("logs/osTicketIncomingEvents.log", "a") or die("Unable to open file!");
 fwrite($logFile, $entityBody . "\n");
 fclose($logFile);
 
