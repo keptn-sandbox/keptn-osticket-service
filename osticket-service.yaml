@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: osticket-service
-        image: keptn-osticket-service
+        image: adamgardnerdt/keptn-osticket-service
         ports:
         - containerPort: 80
         env:
