@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: osticket-service-deployment-distributor
+  namespace: keptn
+spec:
+  selector:
+    matchLabels:
+      run: distributor
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: distributor
+    spec:
+      containers:
+      - name: distributor
+        image: keptn/distributor:0.6.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+        - name: PUBSUB_URL
+          value: 'nats://keptn-nats-cluster'
+        - name: PUBSUB_TOPIC
+          value: 'sh.keptn.events.evaluation-done'
+        - name: PUBSUB_RECIPIENT
+          value: 'osticket-service'
+        - name: PUBSUB_RECIPIENT_PORT
+          value: '80'
