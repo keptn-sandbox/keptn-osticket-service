@@ -4,6 +4,16 @@ This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket)
 * sh.keptn.events.evaluation-done
 
 # Installation
+
+## Build OSTicket Docker Image
+
+Clone this git repo to `~` then build the `keptn-osticket-service` docker image with:
+```
+cd ~/keptn-osticket-service/dockerimage
+docker build -t keptn-osticket-service .
+```
+
+## Install & Configure OSTicket
 To use this service, you need a running OSTicket system. If you need to create one, use the `osTicketInstall.sh` file in the `osticket-setup-files` folder.
 
 > This OSTicket installation script is NOT secure and meant only for demo purposes.
@@ -15,6 +25,7 @@ You will require an OSTicket API key with `Create Ticket` permissions.
 3. Use kubectl to apply both the `osticket-service.yaml` and `osticket-distributor.yaml` files on the keptn cluster:
 
 ```
+cd ~/keptn-osticket-service
 kubectl apply -f osticket-service.yaml -f osticket-distributor.yaml
 ```
 
@@ -34,6 +45,13 @@ Expected output:
 ```
 osticket-service-*-*                                 1/1     Running   0          45s
 osticket-service-deployment-distributor-*-*          1/1     Running   0          45s
+```
+
+# Debugging
+All incoming events from Keptn to the service are logged in raw form to `/var/www/html/logs/osTicketIncomingEvents.log` of the keptn-service pod.
+
+```
+kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketIncomingEvents.log
 ```
 
 # Contributions, Enhancements, Issues or Questions
