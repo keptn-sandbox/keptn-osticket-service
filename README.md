@@ -5,14 +5,6 @@ This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket)
 
 # Installation
 
-## Build OSTicket Docker Image
-
-Clone this git repo to `~` then build the `keptn-osticket-service` docker image with:
-```
-cd ~/keptn-osticket-service/dockerimage
-docker build -t keptn-osticket-service .
-```
-
 ## Install & Configure OSTicket
 To use this service, you need a running OSTicket system. If you need to create one, use the `osTicketInstall.sh` file in the `osticket-setup-files` folder.
 
