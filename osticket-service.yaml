@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: osticket-service
+  namespace: keptn
+spec:
+  selector:
+    matchLabels:
+      run: osticket-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: osticket-service
+    spec:
+      containers:
+      - name: osticket-service
+        image: adamgardnerdt/keptn-osticket-service
+        ports:
+        - containerPort: 80
+        env:
+        - name: OSTICKET_URL
+          value: https://example.com
+        - name: OSTICKET_API_KEY
+          value: ***
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: osticket-service
+  namespace: keptn
+  labels:
+    run: osticket-service
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: osticket-service
