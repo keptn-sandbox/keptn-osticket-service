@@ -40,7 +40,7 @@ osticket-service-deployment-distributor-*-*          1/1     Running   0        
 ```
 
 # Debugging
-All incoming events from Keptn to the service are logged in raw form to `/var/www/html/logs/osTicketIncomingEvents.log` of the keptn-service pod.
+All incoming events from Keptn to the service are logged in raw form to `/var/www/html/logs/osTicketIncomingEvents.log` of the `osticket-service` pod.
 
 ```
 kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketIncomingEvents.log
