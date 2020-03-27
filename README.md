@@ -1,7 +1,7 @@
 # OSTicket Service
-This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket) when a keptn evaluation (`sh.keptn.event.start-evaluation`) is performed. The service is subscribed to the following keptn events:
+This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket) when a keptn evaluation (`sh.keptn.event.start-evaluation`) is performed. The service subscribes to the following keptn events:
 
-* sh.keptn.events.evaluation-done
+* `sh.keptn.events.evaluation-done`
 
 # Installation
 
