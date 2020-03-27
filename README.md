@@ -15,17 +15,26 @@ You will require an OSTicket API key with `Create Ticket` permissions.
 3. Use kubectl to apply both the `osticket-service.yaml` and `osticket-distributor.yaml` files on the keptn cluster:
 
 ```
-kubectl apply -f osticket-service -f osticket-distributor.yaml
+kubectl apply -f osticket-service.yaml -f osticket-distributor.yaml
 ```
 
 Expected output:
 ```
-kubectl -n keptn get pods | grep osticket
+deployment.apps/osticket-service created
+service/osticket-service created
+deployment.apps/osticket-service-deployment-distributor created
 ```
 
 # Verification of Installation
 ```
 kubectl -n keptn get pods | grep osticket
 ```
+
+Expected output:
+```
+osticket-service-*-*                                 1/1     Running   0          45s
+osticket-service-deployment-distributor-*-*          1/1     Running   0          45s
+```
+
 # Contributions, Enhancements, Issues or Questions
 Please raise a GitHub issue.
