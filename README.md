@@ -8,6 +8,12 @@ This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket)
 ## Install & Configure OSTicket
 To use this service, you need a running OSTicket system. If you need to create one, use the `osTicketInstall.sh` file in the `osticket-setup-files` folder.
 
+```
+cd ~/keptn-osticket-service/osticket-setup-files
+chmod +x osTicketInstall.sh && chmod +x cleanup.sh
+./osTicketInstall.sh
+```
+
 > This OSTicket installation script is NOT secure and meant only for demo purposes.
 
 You will require an OSTicket API key with `Create Ticket` permissions.
