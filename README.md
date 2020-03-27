@@ -19,6 +19,14 @@ chmod +x osTicketInstall.sh && chmod +x cleanup.sh
 You will require an OSTicket API key with `Create Ticket` permissions.
 
 1. Go to `http://OSTICKET-IP/scp/apikeys.php?a=add` generate an API key (use the Keptn IP).
+1. Make a note of the OSTicket URL. It should be like: `http://123.111.222.333` (without trailing slash).
+1. Make a note of the OSTicket API you created.
+
+# Install OSTicket Service into Keptn Cluster
+1. Clone this repo onto the keptn machine.
+```
+git clone https://github.com/Dynatrace-Adam-Gardner/keptn-osticket-service
+```
 2. Adjust the `OSTICKET_URL` and `OSTICKET_API_KEY` values in `osticket-service.yaml` to reflect your values.
 3. Use kubectl to apply both the `osticket-service.yaml` and `osticket-distributor.yaml` files on the keptn cluster:
 
