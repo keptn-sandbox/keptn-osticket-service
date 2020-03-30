@@ -64,9 +64,9 @@ kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketInco
 
 ## Compatibility Matrix
 
-| Keptn Version    | [OSTicket Service for Keptn](https://hub.docker.com/r/adamgardnerdt/keptn-osticket-service) |
-|:----------------:|:----------------------------------------:|
-|       0.6.1      | adamgardnerdt/keptn-osticket-service |
+| Keptn Version    | [OSTicket Service for Keptn](https://hub.docker.com/r/adamgardnerdt/keptn-osticket-service) | OSTicket Version|
+|:----------------:|:----------------------------------------:|:------------------------------------------------------------------:|
+|       0.6.1      | adamgardnerdt/keptn-osticket-service |  v1.14.1 |
 
 # Contributions, Enhancements, Issues or Questions
 Please raise a GitHub issue.
