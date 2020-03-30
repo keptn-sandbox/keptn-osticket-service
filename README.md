@@ -44,14 +44,15 @@ deployment.apps/osticket-service-deployment-distributor created
 kubectl -n keptn get pods | grep osticket
 ```
 
-Now start an evaluation and wait for the ticket to be created. Note: You must have your services tagged with `keptn_project`, `keptn_service` and `keptn_stage`.
-```
-keptn send event start-evaluation --project=*** --stage=*** --service=*** --timeframe=2m
-```
 Expected output:
 ```
 osticket-service-*-*                                 1/1     Running   0          45s
 osticket-service-deployment-distributor-*-*          1/1     Running   0          45s
+```
+
+Now start an evaluation and wait for the ticket to be created. Note: You must have your services tagged with `keptn_project`, `keptn_service` and `keptn_stage`.
+```
+keptn send event start-evaluation --project=*** --stage=*** --service=*** --timeframe=2m
 ```
 
 # Debugging
