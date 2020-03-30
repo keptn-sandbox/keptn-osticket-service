@@ -62,5 +62,11 @@ All incoming events from Keptn to the service are logged in raw form to `/var/ww
 kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketIncomingEvents.log
 ```
 
+## Compatibility Matrix
+
+| Keptn Version    | [OSTicket Service for Keptn](https://hub.docker.com/r/adamgardnerdt/keptn-osticket-service) |
+|:----------------:|:----------------------------------------:|
+|       0.6.1      | adamgardnerdt/keptn-osticket-service |
+
 # Contributions, Enhancements, Issues or Questions
 Please raise a GitHub issue.
