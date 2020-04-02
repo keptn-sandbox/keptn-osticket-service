@@ -69,4 +69,4 @@ kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketInco
 |       0.6.1      | adamgardnerdt/keptn-osticket-service |  v1.14.1 |
 
 # Contributions, Enhancements, Issues or Questions
-Please raise a GitHub issue.
+Please raise a GitHub issue or join the [Keptn Slack channel](https://join.slack.com/t/keptn/shared_invite/enQtNTUxMTQ1MzgzMzUxLWMzNmM1NDc4MmE0MmQ0MDgwYzMzMDc4NjM5ODk0ZmFjNTE2YzlkMGE4NGU5MWUxODY1NTBjNjNmNmI1NWQ1NGY).
