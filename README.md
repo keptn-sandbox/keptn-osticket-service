@@ -16,6 +16,12 @@ chmod +x osTicketInstall.sh && chmod +x cleanup.sh
 ./osTicketInstall.sh
 ```
 
+After installation, you'll get an HTTP 500 error. Just refresh the page. Then run the cleanup script.
+
+```
+./cleanup.sh
+```
+
 > This OSTicket installation script is NOT secure and meant only for demo purposes.
 
 You will require an OSTicket API key with `Create Ticket` permissions.
