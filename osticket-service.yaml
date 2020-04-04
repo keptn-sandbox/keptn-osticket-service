@@ -25,7 +25,6 @@ spec:
             secretKeyRef:
               name: osticket-details
               key: url
-          value: http://111.222.333.444
         - name: OSTICKET_API_KEY
           valueFrom:
             secretKeyRef:
