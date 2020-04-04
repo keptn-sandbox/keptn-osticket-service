@@ -21,9 +21,16 @@ spec:
         - containerPort: 80
         env:
         - name: OSTICKET_URL
+          valueFrom:
+            secretKeyRef:
+              name: osticket-details
+              key: osticket-url
           value: http://111.222.333.444
         - name: OSTICKET_API_KEY
-          value: ***
+          valueFrom:
+            secretKeyRef:
+              name: osticket-details
+              key: osticket-api-key
 ---
 apiVersion: v1
 kind: Service
