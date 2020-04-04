@@ -3,6 +3,8 @@ This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket)
 
 * `sh.keptn.events.evaluation-done`
 
+![osticket screenshot](/assets/osticket-screenshot.png)
+
 # Installation
 
 ## Install & Configure OSTicket
