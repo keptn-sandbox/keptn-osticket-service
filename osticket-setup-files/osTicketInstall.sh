@@ -3,6 +3,7 @@
 # This script installs OSTicket.
 # This installation is IN NO WAY SECURE.
 # This script is PURELY for testing purposes and is NOT suitable for PRODUCTION use
+# On AWS, use a t3.small Ubuntu Server 18.04 with 10GB HDD
 
 sudo apt update -y
 sudo apt install unzip apache2 php7.2 php7.2-mysql mysql-server -y
