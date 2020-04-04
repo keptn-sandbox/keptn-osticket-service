@@ -8,6 +8,9 @@ This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket)
 # Installation
 
 ## Install & Configure OSTicket
+
+:warning: Keptn will send the request to create the ticket. Ensure you allow incoming traffic from the Keptn machine to the OSTicket machine.
+
 To use this service, you need a running OSTicket system. If you need to create one, use the `osTicketInstall.sh` file in the `osticket-setup-files` folder.
 
 ```
@@ -22,13 +25,13 @@ After installation, you'll get an HTTP 500 error. Just refresh the page. Then ru
 ./cleanup.sh
 ```
 
-> This OSTicket installation script is NOT secure and meant only for demo purposes.
+:warning: This OSTicket installation script is NOT secure and meant only for demo purposes.
 
 You will require an OSTicket API key with `Create Ticket` permissions.
 
 1. Go to `http://OSTICKET-IP/scp/apikeys.php?a=add` generate an API key (use the Keptn IP).
 1. Make a note of the OSTicket URL. It should be like: `http://123.111.222.333` (without trailing slash).
-1. Make a note of the OSTicket API you created.
+1. Make a note of the OSTicket API key you created.
 
 # Install OSTicket Service into Keptn Cluster
 1. Clone this repo onto the keptn machine.
