@@ -32,8 +32,12 @@ You will require an OSTicket API key with `Create Ticket` permissions.
 
 # Install OSTicket Service into Keptn Cluster
 1. Clone this repo onto the keptn machine.
-1. Adjust the `OSTICKET_URL` and `OSTICKET_API_KEY` values in `osticket-service.yaml` to reflect your values.
-1. Use kubectl to apply both the `osticket-service.yaml` and `osticket-distributor.yaml` files on the keptn cluster:
+1. Create a secret to hold the OSTicket URL, API Key (substituting the values for **your** values below):
+
+```
+kubectl create secret generic osticket-details -n keptn --from-literal=url='http://1.2.3.4' --from-literal=api-key='abcd1234'
+```
+3. Use kubectl to apply both the `osticket-service.yaml` and `osticket-distributor.yaml` files on the keptn cluster:
 
 ```
 cd ~/keptn-osticket-service
