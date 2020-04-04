@@ -71,7 +71,7 @@ keptn send event start-evaluation --project=*** --stage=*** --service=*** --time
 All incoming events from Keptn to the service are logged in raw form to `/var/www/html/logs/osTicketIncomingEvents.log` of the `osticket-service` pod.
 
 ```
-kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osTicketIncomingEvents.log
+kubectl exec -itn keptn osticket-service-*-* cat /var/www/html/logs/osticketIncomingEvents.log
 ```
 
 ## Compatibility Matrix
