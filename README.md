@@ -1,3 +1,6 @@
+> :warning: This repository is now deprecated and will receive no further updates.
+> Users are advised to use the [Keptn Lifecycle Toolkit](https://lifecycle.keptn.sh) instead.
+
 # OSTicket Service
 This service creates tickets in [OSTicket](https://github.com/osTicket/osTicket) when a keptn evaluation (`sh.keptn.event.start-evaluation`) is performed. The service subscribes to the following keptn events:
 
